@@ -8,7 +8,7 @@ body {
     flex-direction: column;
 }
 
-main {
+.main {
     flex-grow: 1;
 }
 
@@ -18,10 +18,10 @@ main {
     padding: 0 15px;
 }
 
-.footer,
-.footer a {
-    display: block;
-    @extend %rubik-400;
-    font-size: 14px;
-    color: #7b7b7b;
-}
+// .footer,
+// .footer a {
+//     display: block;
+//     @extend %rubik-400;
+//     font-size: 14px;
+//     color: #7b7b7b;
+// }
