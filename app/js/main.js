@@ -1,9 +1,9 @@
 $(function() {
 
-    $('.slider__inner').slick({
+    $('.slider-top__inner').slick({
         dots: true,
-        arrows: false,
-        fade: true
+        arrows: false
+
     })
     var mixer = mixitup('.products__items', {
         selectors: {

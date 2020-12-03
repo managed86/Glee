@@ -33,3 +33,16 @@ $accent: #7b7b7b;
     font-family: 'Rubik-Medium', sans-serif;
     font-weight: 500;
 }
+
+%myriad-400 {
+    font-family: 'MyriadPro-Regular', sans-serif;
+    font-weight: 400;
+}
+
+@function max($numbers...) {
+    @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+    @return m#{i}n(#{$numbers});
+}

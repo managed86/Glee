@@ -25,10 +25,6 @@ body {
     text-align: center;
 }
 
-.mixitup-control-active {
-    color: #1a1a1a;
-}
-
 .filter {
     text-align: center;
     margin-bottom: 80px;
@@ -46,4 +42,8 @@ body {
     &+& {
         margin-left: 14px;
     }
+}
+
+.mixitup-control-active {
+    color: #1a1a1a;
 }
