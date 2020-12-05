@@ -1,0 +1,12 @@
+.video {
+    padding: 60px 0 110px;
+    &__inner {
+        background-color: #e6e6e6;
+        background-repeat: no-repeat;
+        background-origin: border-box;
+        min-height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
