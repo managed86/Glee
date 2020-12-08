@@ -1,20 +1,24 @@
 .service {
-    max-width: 1770px;
-    margin: 0 auto;
+    
+
     &__inner {
         background-color: rgba(252, 215, 182, 0.2);
         display: flex;
     }
+
     &__inner-item {
         width: 33.3333%;
         padding: 33px 0;
         display: flex;
         justify-content: center;
         align-items: center;
+
         &+& {
             border-left: 1px solid rgba(36, 63, 77, 0.1);
         }
+
     }
+
     &__inner-content {
         max-width: 300px;
         padding-left: 76px;
@@ -27,30 +31,41 @@
             left: 0;
             transform: translateY(-50%);
         }
-        &--support::before {
-            content: url("../images/icons/24.svg");
-            width: 52px;
-            height: 54px;
+
+        &--support {
+            &::before {
+                content: url("../images/icons/24.svg");
+                width: 52px;
+                height: 54px;
+            }
         }
-        &--delivery::before {
-            content: url("../images/icons/delivery.svg");
-            width: 54px;
-            height: 36px;
+
+        &--delivery {
+            &::before {
+                content: url("../images/icons/delivery.svg");
+                width: 54px;
+                height: 36px;
+            }
         }
-        &--payment::before {
-            content: url("../images/icons/payment.svg");
-            width: 54px;
-            height: 52px;
+
+        &--payment {
+            &::before {
+                content: url("../images/icons/payment.svg");
+                width: 54px;
+                height: 52px;
+            }
         }
     }
+
     &__title {
         @extend %dmsans-700;
         font-size: 18px;
-        line-height: 40px;
+        line-height: 2.2;
     }
+
     &__text {
         @extend %dmsans-400;
         font-size: 16px;
-        line-height: 30px;
+        line-height: 1.8;
     }
 }

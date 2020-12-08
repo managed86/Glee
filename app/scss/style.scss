@@ -2,16 +2,18 @@
     @import 'common/fonts';
     @import 'common/reset';
     @import 'common/global';
+
     @import 'components/header';
-    @import 'components/insights';
-    @import 'components/question';
-    @import 'components/partners';
     @import 'components/footer';
+
     @import 'blocks/service';
     @import 'blocks/slider-top';
     @import 'blocks/products';
     @import 'blocks/lamp';
     @import 'blocks/news';
     @import 'blocks/video';
+    @import 'blocks/insights';
+    @import 'blocks/partners';
+    
     @import 'libs';
     @import 'media';

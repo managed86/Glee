@@ -1,4 +1,5 @@
 .footer {
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -8,44 +9,50 @@
         font-size: 14px;
         color: $accent;
     }
+
     &__items {
         width: 100%;
         max-width: 270px;
     }
+
     &__title {
         @extend %dmsans-700;
         font-size: 16px;
         color: #1f2044;
         text-transform: uppercase;
-        line-height: 21px;
         margin-bottom: 22px;
         padding-top: 16px;
     }
+
     &__logo {
         margin-bottom: 23px;
         display: block;
     }
+
     &__link {
         display: inline-block;
         @extend %rubik-400;
         font-size: 14px;
         color: $accent;
-        line-height: 15px;
-        margin-bottom: 17px;
+        margin-bottom: 16px;
         border-bottom: 1px solid transparent;
-        transition: color, border-bottom .3s;
+        transition: color, border-bottom, .5s;
+
         &:hover {
             color: $grey-blue;
             border-bottom: 1px solid $grey-blue;
         }
     }
+
     &__text {
-        line-height: 22px;
+        line-height: 1.5;
         margin-bottom: 32px;
     }
+
     &__form {
         display: flex;
     }
+
     &__input {
         width: 100%;
         max-width: 170px;
@@ -54,50 +61,60 @@
         border: none;
         outline: transparent;
         padding: 13px;
+
         &::placeholder {
             @extend %dmsans-400;
             font-size: 12px;
         }
     }
+
     &__btn {
         background-color: $grey-blue;
         @extend %dmsans-400;
         color: #fff;
         font-size: 14px;
-        line-height: 21px;
+        line-height: 1.5;
         padding: 10px 15px;
         border: none;
     }
+
     &__copy {
         height: 90px;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     &__copy-text,
     &__copy-link {
         @extend %rubik-400;
         color: $accent;
         font-size: 14px;
-        transition: color, border-bottom 0.3s;
+        transition: color, border-bottom, 0.5s;
+
         &:hover {
             color: $grey-blue;
             border-bottom: 1px solid $grey-blue;
         }
     }
+
     &__copy-list {
         display: flex;
     }
+
     &__copy-item {
+
         &+& {
             margin-left: 16px;
             padding-left: 16px;
             border-left: 1px solid $accent;
         }
     }
+
     &__address {
         max-width: 200px;
     }
+
     &__address-link {
         display: inline-block;
         @extend %rubik-400;
@@ -106,7 +123,8 @@
         color: $accent;
         margin-bottom: 10px;
         border-bottom: 1px solid transparent;
-        transition: color, border-bottom .3s;
+        transition: color, border-bottom, .5s;
+
         &:hover {
             color: $grey-blue;
             border-bottom: 1px solid $grey-blue;

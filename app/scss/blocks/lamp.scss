@@ -1,10 +1,10 @@
 .lamp {
-    max-width: 1770px;
-    margin: 0 auto;
     padding: 86px 0 24px;
+
     &__inner {
         display: flex;
     }
+
     &__item {
         margin-top: 100px;
         background-color: rgba(252, 215, 182, 0.4);
@@ -13,14 +13,17 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 86px;
+
         &+& {
             margin-left: 30px;
         }
     }
+
     &__item-img {
         margin-top: -100px;
         margin-right: 40px;
     }
+
     &__content {
         max-width: 400px;
         height: 100%;
@@ -29,17 +32,20 @@
         justify-content: space-between;
         padding: 86px 0 0 15px;
     }
+
     &__item-title {
         max-width: 260px;
         @extend %dmsans-700;
         font-size: 26px;
-        line-height: 32px;
+        line-height: 1.2;
     }
+
     &__item-text {
         @extend %rubik-400;
         font-size: 16px;
-        line-height: 30px;
+        line-height: 1.8;
     }
+
     &__item-link {
         display: block;
         padding: 25px 20px 25px 25px;
@@ -48,9 +54,10 @@
         border: 1px solid rgba(67, 99, 114, 0.4);
         @extend %rubik-500;
         font-size: 15px;
-        line-height: 12px;
         color: $medium-dark;
         position: relative;
+        transition: background-color, color, border, 1s;
+
         &::after {
             position: absolute;
             content: url('../images/icons/arrow-btn-accent.svg');
@@ -59,11 +66,13 @@
             right: 20px;
             transform: translateY(-50%, -50%);
         }
+
         &:hover {
             background-color: $grey-blue;
             color: #fff;
             text-align: center;
             border: 1px solid transparent;
+            
             &:after {
                 display: none;
             }

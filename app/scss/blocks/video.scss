@@ -9,4 +9,31 @@
         justify-content: center;
         align-items: center;
     }
+    
+    &__popup {
+        width: 127px;
+        height: 127px;
+        z-index: 73;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: blue-circle;
+        animation-duration: .6s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        outline: 0;
+    }
+}
+
+@keyframes blue-circle {
+    0% {
+        border-radius: 50%;
+    }
+    100% {
+        border-radius: 50%;
+        background-color: rgba(163, 187, 200, 0.4);
+        width: 127px;
+        height: 127px;
+        z-index: 72;
+    }
 }

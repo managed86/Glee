@@ -1,49 +1,59 @@
 .insights {
     background: linear-gradient(180deg, #fff 350px, rgba(252, 215, 182, 0.2) 0%);
+
     &__inner-top {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 40px;
     }
-    &__inner-top-link {
+
+    &__top-link {
         @extend %dmsans-700;
         font-size: 16px;
         color: #262626;
+
         &::after {
             content: ">";
             margin-left: 16px;
         }
     }
+
     &__inner-items {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
+
     &__inner-item {
+        display: flex;
+        flex-direction: column;
         background-color: #fff;
         max-width: 370px;
         border-radius: 5px;
         box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-        display: flex;
-        flex-direction: column;
         overflow: hidden;
-        & :not(:nth-child(1)) {
-            margin-left: 30px;
-            margin-right: 30px;
-        }
     }
+
     &__inner-img {
         max-width: 370px;
         min-height: 263px;
     }
+
+    &__inner-box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
     &__inner-news {
         width: 103px;
         height: 30px;
         @extend %poppins-700;
         font-size: 14px;
         color: #fff;
-        line-height: 30px;
+        line-height: 2;
         text-align: center;
         text-transform: uppercase;
         background-color: rgb(163, 187, 200);
@@ -51,26 +61,32 @@
         margin: -15px 0 20px;
         display: block;
     }
+
     &__inner-text {
         @extend %dmsans-500;
         font-size: 18px;
         color: #262626;
         margin-bottom: 15px;
-        align-items: stretch;
+        -webkit-line-clamp: 3;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
+
     &__inner-autor {
         margin-top: auto;
         padding-top: 18px;
         padding-bottom: 20px;
         border-top: 1px solid #e0e0e0;
     }
+
     &__inner-calendar,
     &__inner-user {
         font-size: 14px;
-        line-height: normal;
         color: #222933;
         @extend %myriad-400;
     }
+
     &__inner-calendar {
         margin-right: 30px;
     }
