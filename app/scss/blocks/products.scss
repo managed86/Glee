@@ -1,90 +1,109 @@
 .products {
-    padding-top: 74px;
-
-    &__title {
-        margin-bottom: 40px;
-    }
-
-    &__items {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, minmax(auto));
-        column-gap: 30px;
-        row-gap: 20px;
-    }
-
-    &__item {
-        border-radius: 10px;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
-        max-width: 270px;
-        min-height: 380px;
-        text-align: center;
-        padding-bottom: 33px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-
-        &:hover {
-            .products__item-menu {
-                transform: translate(0, -50%);
-            }
-        }
-    }
-
-    &__item-menu {
-        position: absolute;
-        top: 50%;
-        transform: translateY(450%);
-        transition: transform .4s;
-        display: flex;
-    }
-
-    &__item-link {
-        border-radius: 50%;
-        border: none;
-        background-color: rgb(255, 255, 255);
-        box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.1);
-        width: 45px;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color .4s;
-        outline: 0;
-        cursor: pointer;
-
-        &+& {
-            margin-left: 15px;
-        }
-
-        &:hover {
-            background-color: $grey-blue;
-
-            path {
-                fill: #fff;
-            }
-        }
-    }
-
-    &__item-img {
-        margin: auto;
-    }
-
-    &__item-title {
-        @extend %dmsans-500;
-        font-size: 16px;
-        line-height: 1.9;
-        color: $dark-grey;
-    }
-    
-    &__item-price {
-        @extend %dmsans-700;
-        font-size: 16px;
-        line-height: 1.7;
-        color: $grey-blue;
-    }
+   padding-top: 74px;
+   @media (max-width: $xs) {
+      padding-top: 40px;
+   }
+   &__title {
+      margin-bottom: 40px;
+      @media (max-width: $xs) {
+         margin-bottom: 30px;
+      }
+   }
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, minmax(auto));
+      column-gap: 30px;
+      row-gap: 20px;
+      @media (max-width: $lg) {
+         grid-template-columns: repeat(3, 1fr);
+         grid-template-rows: repeat(3, minmax(auto));
+      }
+      @media (max-width: $md) {
+         column-gap: 15px;
+         row-gap: 15px;
+      }
+      @media (max-width: $sm) {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+   &__item {
+      border-radius: 10px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+      max-width: 270px;
+      min-height: 380px;
+      text-align: center;
+      padding-bottom: 33px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      &:hover {
+         .products__item-menu {
+            transform: translate(0, -50%);
+         }
+      }
+      @media (max-width: $lg) {
+         max-width: 100%;
+      }
+      @media (max-width: $sm) {
+         min-height: 320px;
+      }
+      @media (max-width: $sm) {
+         min-height: 220px;
+         padding-bottom: 5px;
+      }
+   }
+   &__item-menu {
+      position: absolute;
+      top: 50%;
+      transform: translateY(450%);
+      transition: transform .4s;
+      display: flex;
+   }
+   &__item-link {
+      border-radius: 50%;
+      border: none;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.1);
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color .4s;
+      outline: 0;
+      cursor: pointer;
+      &+& {
+         margin-left: 15px;
+      }
+      &:hover {
+         background-color: $grey-blue;
+         path {
+            fill: #fff;
+         }
+      }
+   }
+   &__item-img {
+      margin: auto;
+      max-height: 206px;
+      @media (max-width: $sm) {
+         max-width: 80%
+      }
+   }
+   &__item-title {
+      @extend %dmsans-500;
+      font-size: 16px;
+      line-height: 1.9;
+      color: $dark-grey;
+   }
+   &__item-price {
+      @extend %dmsans-700;
+      font-size: 16px;
+      line-height: 1.7;
+      color: $grey-blue;
+   }
 }

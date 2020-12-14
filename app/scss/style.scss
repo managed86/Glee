@@ -2,10 +2,8 @@
     @import 'common/fonts';
     @import 'common/reset';
     @import 'common/global';
-
     @import 'components/header';
     @import 'components/footer';
-
     @import 'blocks/service';
     @import 'blocks/slider-top';
     @import 'blocks/products';
@@ -14,6 +12,11 @@
     @import 'blocks/video';
     @import 'blocks/insights';
     @import 'blocks/partners';
-    
+    @import 'blocks/page';
+    @import 'blocks/modal';
+    @import 'blocks/manual';
+    @import 'blocks/mission';
+    @import 'blocks/statistics';
+    @import 'blocks/team';
     @import 'libs';
     @import 'media';

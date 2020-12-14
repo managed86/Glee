@@ -1,0 +1,91 @@
+.mission {
+   padding: 120px 0;
+   &__inner {
+      display: flex;
+      @extend %rubik-400;
+      font-size: 16px;
+      color: $dark-grey;
+   }
+   &__img {
+      margin-right: 30px;
+   }
+   &__content {
+      padding: 75px 15px 75px 4px;
+   }
+   &__box {
+      display: flex;
+      align-items: flex-end;
+      max-width: 300px;
+      height: 140px;
+      margin-bottom: 30px;
+   }
+   &__num {
+      margin: auto 30px auto 0;
+      @extend %rubik-700;
+      font-size: 140px;
+      color: #a3bbc8;
+      line-height: 1.2;
+   }
+   &__text {
+      line-height: 1.875;
+   }
+   &__title {
+      @extend %dmsans-700;
+      font-size: 36px;
+      color: $dark-grey;
+      line-height: 1.2;
+      margin-bottom: 40px;
+   }
+   &__line {
+      height: 3px;
+      max-width: 500px;
+      background-color: rgb(9, 49, 111);
+      opacity: 0.102;
+      margin: 60px 0 30px;
+   }
+   &__items {
+      display: flex;
+      justify-content: space-around;
+   }
+   &__wrap {
+      text-align: center;
+   }
+   &__item {
+      width: 33.3333%;
+      min-height: 81px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &+& {
+         border-left: 1px solid rgba(9, 49, 111, 0.102);
+      }
+      &--project,
+      &--revenue,
+      &--awards {
+         &::before {
+            margin-right: 10px;
+         }
+      }
+      &--project {
+         &::before {
+            content: url("../images/icons/projects.svg");
+            width: 37px;
+            height: 38px;
+         }
+      }
+      &--revenue {
+         &::before {
+            content: url("../images/icons/revenue.svg");
+            width: 44px;
+            height: 40px;
+         }
+      }
+      &--awards {
+         &::before {
+            content: url("../images/icons/awards.svg");
+            width: 43px;
+            height: 42px;
+         }
+      }
+   }
+}

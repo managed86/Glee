@@ -1,128 +1,169 @@
 .header {
-    width: 100%;
-    padding: 48px 15px 45px;
+   width: 100%;
+   padding: 48px 15px 45px;
+   position: fixed;
+   background-color: #fff;
+   z-index: 100;
+   @media (max-width: $lg) {
+      padding: 20px 0;
+   }
+   @media (max-width:$xs) {
+      padding: 10px 0;
+   }
+}
+
+.logo {
+   z-index: 1;
+   margin-right: 175px;
+   @media (max-width: $lg) {
+      margin-right: 30px;
+   }
+   @media (max-width: $md) {
+      margin-right: 0px;
+   }
 }
 
 .menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &__list {
-        display: flex;
-    }
-
-    &__list-item {
-        display: inline-block;
-        height: 20px;
-        position: relative;
-
-        &+& {
-            margin-left: 30px;
-        }
-
-        &:hover>.menu__list-submenu {
-            display: block;
-        }
-
-    }
-    &__list-submenu {
-        position: absolute;
-        top: 20px;
-        left: 0px;
-        display: none;
-        background-color: $grey-blue;
-        opacity: 0.9;
-        border-radius: 5px;
-        min-width: 150px;
-        text-align: center;
-        padding: 10px !important;
-    }
-
-    &__list-submenu-item {
-        margin: 10px 0;
-    }
-
-    &__list-submenu-link {
-        @extend %myriad-400;
-        color: #fff;
-        font-size: 14px;
-        transition: border-bottom 3s;
-
-        &:hover {
-            border-bottom: 1px solid #fff;
-            text-transform: uppercase;
-        }
-    }
-
-    &__list-link {
-        @extend %rubik-500;
-        font-size: 15px;
-        color: $medium-dark;
-        line-height: normal;
-        cursor: pointer;
-        transition: color .7s, border-bottom 1s linear;
-
-        &:hover {
-            color: $grey-blue;
-            border-bottom: 1px solid $grey-blue;
-        }
-    }
-
-    &__user {
-        display: flex;
-    }
-
-    &__user-link {
-        position: relative;
-
-        &--heart,
-        &--cart {
-            padding: 0 30px;
-            height: 32px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            &:hover {
-                .menu__user-num {
-                    width: 20px;
-                    height: 20px;
-                    font-size: 15px;
-                    line-height: 20px;
-                }
-
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   &__list {
+      display: flex;
+      @media (max-width: $sm) {
+         position: fixed;
+         top: -100%;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: $peach;
+         padding-top: 80px !important;
+         display: block;
+         text-align: center;
+         transition: top .5s;
+      }
+      &.active {
+         top: 0;
+      }
+   }
+   &__list-item {
+      display: inline-block;
+      height: 20px;
+      position: relative;
+      @media (max-width: $sm) {
+         display: block;
+         margin-bottom: 20px;
+      }
+      &+& {
+         margin-left: 30px;
+         @media (max-width: $md) {
+            margin-left: 25px;
+         }
+         @media (max-width: $sm) {
+            margin-left: 0;
+         }
+      }
+      &:hover>.menu__list-submenu {
+         display: block;
+      }
+   }
+   &__list-submenu {
+      position: absolute;
+      top: 20px;
+      left: 0px;
+      display: none;
+      background-color: $grey-blue;
+      opacity: 0.9;
+      border-radius: 5px;
+      min-width: 150px;
+      text-align: center;
+      padding: 10px !important;
+   }
+   &__list-submenu-item {
+      margin: 10px 0;
+   }
+   &__list-submenu-link {
+      @extend %myriad-400;
+      color: #fff;
+      font-size: 14px;
+      transition: font-size .6s, border-bottom 3s;
+      &:hover {
+         border-bottom: 1px solid #fff;
+         font-size: 16px;
+      }
+   }
+   &__list-link {
+      @extend %rubik-500;
+      font-size: 15px;
+      color: $medium-dark;
+      line-height: normal;
+      cursor: pointer;
+      transition: color .7s, border-bottom 1s linear;
+      &:hover {
+         color: $grey-blue;
+         border-bottom: 1px solid $grey-blue;
+      }
+   }
+   &__user {
+      display: flex;
+   }
+   &__user-link {
+      position: relative;
+      &--heart,
+      &--cart {
+         padding: 0 30px;
+         height: 32px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         &:hover {
+            .menu__user-num {
+               width: 20px;
+               height: 20px;
+               font-size: 15px;
+               line-height: 20px;
             }
-        }
-
-        &--heart {
-            border-right: 1px solid #fde7d3;
-        }
-    }
-
-    &__user-item {
-        display: flex;
-        margin: 0 20px;
-        padding: 10px;
-        min-width: 178px;
-        height: 52px;
-        background-color: $peach;
-        border-radius: 25px;
-    }
-    
-    &__user-num {
-        position: absolute;
-        top: 0px;
-        right: 21px;
-        background-color: #fff;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        @extend %dmsans-400;
-        font-size: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: width, height, font-size, line-height, .4s;
-    }
+         }
+      }
+      &--heart {
+         border-right: 1px solid #fde7d3;
+      }
+      &--search {
+         @media (max-width: $md) {
+            margin-right: 10px;
+         }
+      }
+   }
+   &__user-item {
+      display: flex;
+      margin: 0 20px;
+      padding: 10px;
+      min-width: 178px;
+      height: 52px;
+      background-color: $peach;
+      border-radius: 25px;
+      @media (max-width: $lg) {
+         margin: 0 10px;
+      }
+      @media (max-width: $md) {
+         display: none;
+      }
+   }
+   &__user-num {
+      position: absolute;
+      top: 0px;
+      right: 21px;
+      background-color: #fff;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      @extend %dmsans-400;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: width, height, font-size, line-height, .4s;
+   }
+   &__burger {
+      &.active {}
+   }
 }

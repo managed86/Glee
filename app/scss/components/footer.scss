@@ -1,133 +1,165 @@
 .footer {
-
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        padding: 80px 0 56px;
-        border-bottom: 1px solid rgba(163, 187, 200, 0.4);
-        @extend %rubik-400;
-        font-size: 14px;
-        color: $accent;
-    }
-
-    &__items {
-        width: 100%;
-        max-width: 270px;
-    }
-
-    &__title {
-        @extend %dmsans-700;
-        font-size: 16px;
-        color: #1f2044;
-        text-transform: uppercase;
-        margin-bottom: 22px;
-        padding-top: 16px;
-    }
-
-    &__logo {
-        margin-bottom: 23px;
-        display: block;
-    }
-
-    &__link {
-        display: inline-block;
-        @extend %rubik-400;
-        font-size: 14px;
-        color: $accent;
-        margin-bottom: 16px;
-        border-bottom: 1px solid transparent;
-        transition: color, border-bottom, .5s;
-
-        &:hover {
-            color: $grey-blue;
-            border-bottom: 1px solid $grey-blue;
-        }
-    }
-
-    &__text {
-        line-height: 1.5;
-        margin-bottom: 32px;
-    }
-
-    &__form {
-        display: flex;
-    }
-
-    &__input {
-        width: 100%;
-        max-width: 170px;
-        background-color: #fef7f0;
-        color: #234969;
-        border: none;
-        outline: transparent;
-        padding: 13px;
-
-        &::placeholder {
-            @extend %dmsans-400;
-            font-size: 12px;
-        }
-    }
-
-    &__btn {
-        background-color: $grey-blue;
-        @extend %dmsans-400;
-        color: #fff;
-        font-size: 14px;
-        line-height: 1.5;
-        padding: 10px 15px;
-        border: none;
-    }
-
-    &__copy {
-        height: 90px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__copy-text,
-    &__copy-link {
-        @extend %rubik-400;
-        color: $accent;
-        font-size: 14px;
-        transition: color, border-bottom, 0.5s;
-
-        &:hover {
-            color: $grey-blue;
-            border-bottom: 1px solid $grey-blue;
-        }
-    }
-
-    &__copy-list {
-        display: flex;
-    }
-
-    &__copy-item {
-
-        &+& {
-            margin-left: 16px;
-            padding-left: 16px;
-            border-left: 1px solid $accent;
-        }
-    }
-
-    &__address {
-        max-width: 200px;
-    }
-
-    &__address-link {
-        display: inline-block;
-        @extend %rubik-400;
-        font-size: 14px;
-        line-height: 24px;
-        color: $accent;
-        margin-bottom: 10px;
-        border-bottom: 1px solid transparent;
-        transition: color, border-bottom, .5s;
-
-        &:hover {
-            color: $grey-blue;
-            border-bottom: 1px solid $grey-blue;
-        }
-    }
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 80px 0 56px;
+      border-bottom: 1px solid rgba(163, 187, 200, 0.4);
+      @extend %rubik-400;
+      font-size: 14px;
+      color: $accent;
+      @media (max-width: $md) {
+         flex-wrap: wrap;
+      }
+      @media (max-width:$sm) {
+         flex-flow: wrap;
+         justify-content: space-evenly;
+      }
+      @media (max-width:$xs) {
+         gap: 30px;
+      }
+   }
+   &__items {
+      width: 100%;
+      max-width: 270px;
+      @media (max-width: $md) {
+         max-width: 246px;
+      }
+      @media (max-width:$sm) {
+         &:nth-child(1) {
+            order: 3;
+         }
+         &:nth-child(2) {
+            order: 2;
+         }
+         &:nth-child(3) {
+            order: 1;
+         }
+         &:nth-child(4) {
+            order: 4;
+         }
+      }
+      @media (max-width: $xs) {
+         text-align: center;
+      }
+   }
+   &__title {
+      @extend %dmsans-700;
+      font-size: 16px;
+      color: #1f2044;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      padding-top: 16px;
+      @media (max-width: $md) {
+         text-align: center;
+      }
+   }
+   &__list {
+      @media (max-width: $md) {
+         text-align: center;
+      }
+   }
+   &__logo {
+      margin-bottom: 23px;
+      margin-right: 0;
+      display: block;
+      @media (max-width: $xs) {
+         display: inline-block;
+      }
+   }
+   &__link {
+      display: inline-block;
+      @extend %rubik-400;
+      font-size: 14px;
+      color: $accent;
+      margin-bottom: 16px;
+      border-bottom: 1px solid transparent;
+      transition: color, border-bottom, .5s;
+      &:hover {
+         color: $grey-blue;
+         border-bottom: 1px solid $grey-blue;
+      }
+   }
+   &__text {
+      line-height: 1.5;
+      margin-bottom: 32px;
+   }
+   &__form {
+      display: flex;
+   }
+   &__input {
+      width: 100%;
+      max-width: 170px;
+      background-color: #fef7f0;
+      color: #234969;
+      border: none;
+      outline: transparent;
+      padding: 13px;
+      &::placeholder {
+         @extend %dmsans-400;
+         font-size: 12px;
+      }
+   }
+   &__btn {
+      background-color: $grey-blue;
+      @extend %dmsans-400;
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 10px 15px;
+      border: none;
+   }
+   &__copy {
+      height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: $sm) {
+         flex-direction: column;
+         justify-content: space-evenly;
+      }
+   }
+   &__copy-text,
+   &__copy-link {
+      @extend %rubik-400;
+      color: $accent;
+      font-size: 14px;
+      transition: color, border-bottom, 0.5s;
+      &:hover {
+         color: $grey-blue;
+         border-bottom: 1px solid $grey-blue;
+      }
+      @media (max-width:$xs) {
+         text-align: center;
+      }
+   }
+   &__copy-list {
+      display: flex;
+   }
+   &__copy-item {
+      &+& {
+         margin-left: 16px;
+         padding-left: 16px;
+         border-left: 1px solid $accent;
+      }
+   }
+   &__address {
+      max-width: 200px;
+      @media (max-width: $xs) {
+         max-width: 100%;
+      }
+   }
+   &__address-link {
+      display: inline-block;
+      @extend %rubik-400;
+      font-size: 14px;
+      line-height: 24px;
+      color: $accent;
+      margin-bottom: 10px;
+      border-bottom: 1px solid transparent;
+      transition: color, border-bottom, .5s;
+      &:hover {
+         color: $grey-blue;
+         border-bottom: 1px solid $grey-blue;
+      }
+   }
 }
