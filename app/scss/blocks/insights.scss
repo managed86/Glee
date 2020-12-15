@@ -87,11 +87,26 @@
    }
    &__calendar,
    &__user {
+      display: inline-flex;
       font-size: 14px;
       color: #222933;
       @extend %myriad-400;
    }
+   &__user {
+      &::before {
+         content: url(../images/icons/user.svg);
+         width: 13px;
+         height: 13px;
+         margin-right: 8px;
+      }
+   }
    &__calendar {
       margin-right: 30px;
+      &::before {
+         content: url(../images/icons/calendar.svg);
+         width: 13px;
+         height: 13px;
+         margin-right: 8px;
+      }
    }
 }

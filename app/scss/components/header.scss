@@ -128,6 +128,11 @@
          border-right: 1px solid #fde7d3;
       }
       &--search {
+         display: flex;
+         width: 51px;
+         height: 52px;
+         background-color: rgba(163, 187, 200, 0.2);
+         border-radius: 50px;
          @media (max-width: $md) {
             margin-right: 10px;
          }
@@ -164,6 +169,11 @@
       transition: width, height, font-size, line-height, .4s;
    }
    &__burger {
+      display: flex;
+      width: 51px;
+      height: 52px;
+      background-color: #a3bbc8;
+      border-radius: 50px;
       &.active {}
    }
 }

@@ -1,0 +1,53 @@
+.search-icon,
+.burger-icon,
+.search-products,
+.cart-products,
+.heart-products {
+   margin: auto;
+}
+
+.search-icon {
+   width: 15px;
+   height: 15px;
+   fill: $dark-grey;
+}
+
+.heart-icon {
+   width: 18px;
+   height: 17px;
+   fill: #29282d;
+}
+
+.cart-icon {
+   width: 19px;
+   height: 17px;
+}
+
+.burger-icon {
+   width: 20px;
+   height: 20px;
+}
+
+.search-products,
+.cart-products,
+.heart-products {
+   fill: #a3bbc8;
+   &:hover {
+      fill: #fff;
+   }
+}
+
+.search-products {
+   width: 20px;
+   height: 20px;
+}
+
+.cart-products {
+   width: 22px;
+   height: 20px;
+}
+
+.heart-products {
+   width: 22px;
+   height: 18px;
+}
