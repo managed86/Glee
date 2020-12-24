@@ -27,6 +27,11 @@ body {
    max-width: 1200px;
    margin: 0 auto;
    padding: 0 15px;
+   &--big {
+      max-width: 1230px;
+      margin: 0 auto;
+      padding: 0 15px;
+   }
    &--large {
       max-width: 1800px;
       margin: 0 auto;
@@ -136,4 +141,35 @@ body {
    @extend %dmsans-700;
    font-size: 16px;
    color: #4c4c4c;
+}
+
+.count {
+   width: 150px;
+   display: flex;
+   border: 1px solid #a3bbc8;
+   display: inline-flex;
+   margin-right: 15px;
+   &__minus,
+   &__num,
+   &__plus {
+      width: 50px;
+      height: 54px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 15px;
+      @extend %rubik-400;
+      color: #333333;
+   }
+   &__num {
+      outline: 0;
+      border: none;
+      border-left: 1px solid #a3bbc8;
+      border-right: 1px solid #a3bbc8;
+   }
+   &__minus,
+   &__plus {
+      cursor: pointer;
+   }
 }

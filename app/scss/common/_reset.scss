@@ -1,17 +1,17 @@
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
 }
 
 *,
 *::after,
 *::before {
-    box-sizing: inherit;
+   box-sizing: inherit;
 }
 
 ul[class],
 ol[class] {
-    padding: 0;
+   padding: 0;
 }
 
 body,
@@ -30,29 +30,39 @@ figcaption,
 blockquote,
 dl,
 dd {
-    margin: 0;
+   margin: 0;
 }
 
 ul[class] {
-    list-style: none;
+   list-style: none;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+   max-width: 100%;
+   display: block;
 }
 
 input,
 button,
 textarea,
 select {
-    font: inherit;
+   font: inherit;
 }
 
 address {
-    font-style: normal;
+   font-style: normal;
 }
 
 a {
-    text-decoration: none;
+   text-decoration: none;
+}
+
+input[type='number'] {
+   -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
 }
