@@ -123,6 +123,7 @@ $(function() {
       }
 
    });
+
    var mixer = mixitup('.news__items', {
       selectors: {
          control: '.news__btn'
