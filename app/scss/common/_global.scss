@@ -13,13 +13,13 @@ body {
 
 .main {
    flex-grow: 1;
-   margin-top: 151px;
-   @media (max-width: $lg) {
-      margin-top: 98px;
-   }
-   @media (max-width: $xs) {
-      margin-top: 78px;
-   }
+   // margin-top: 151px;
+   // @media (max-width: $lg) {
+   //    margin-top: 98px;
+   // }
+   // @media (max-width: $xs) {
+   //    margin-top: 78px;
+   // }
 }
 
 .container {
@@ -63,7 +63,7 @@ body {
    &__btn {
       border: none;
       background-color: transparent;
-      font-size: 16px;
+      // font-size: 16px;
       @extend %dmsans-700;
       color: #939393;
       line-height: 1.2;
@@ -117,8 +117,8 @@ body {
       }
    }
    &__link {
-      @extend %rubik-400;
-      font-size: 14px;
+      // @extend %rubik-400;
+      // font-size: 14px;
       line-height: 1.7;
       color: rgba(34, 41, 51, 0.6);
       transition: color .6s;
@@ -138,7 +138,7 @@ body {
 .works {
    display: block;
    @extend %dmsans-700;
-   font-size: 16px;
+   // font-size: 16px;
    color: #4c4c4c;
 }
 

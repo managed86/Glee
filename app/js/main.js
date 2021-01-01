@@ -1,6 +1,17 @@
 $(function() {
 
 
+   $(window).on('scroll', function() {
+
+      if ($(this).scrollTop() > window.innerHeight * 0.7) {
+         $('.menu').addClass('fixed');
+      } else {
+         $('.menu').removeClass('fixed');
+      }
+
+   });
+
+
    $(".filter-price__input").ionRangeSlider({
       type: "double",
       prefix: "$",

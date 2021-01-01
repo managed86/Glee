@@ -85,8 +85,6 @@
       }
    }
    &__item-text {
-      @extend %rubik-400;
-      font-size: 16px;
       line-height: 1.8;
       @media (max-width: $xs) {
          font-size: 14px;

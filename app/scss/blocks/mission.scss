@@ -2,8 +2,6 @@
    padding: 120px 0;
    &__inner {
       display: flex;
-      @extend %rubik-400;
-      font-size: 16px;
       color: $dark-grey;
    }
    &__img {
@@ -23,7 +21,7 @@
       margin: auto 30px auto 0;
       @extend %rubik-700;
       font-size: 140px;
-      color: #a3bbc8;
+      color: $grey-blue;
       line-height: 1.2;
    }
    &__text {
@@ -39,7 +37,7 @@
    &__line {
       height: 3px;
       max-width: 500px;
-      background-color: rgb(9, 49, 111);
+      background-color: #09316f;
       opacity: 0.102;
       margin: 60px 0 30px;
    }

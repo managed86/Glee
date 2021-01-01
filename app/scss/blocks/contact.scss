@@ -3,15 +3,14 @@
    &__text {
       display: block;
       text-align: center;
-      font-size: 16px;
       @extend %poppins-700;
-      color: #a3bbc8;
+      color: $grey-blue;
       line-height: 1.25;
    }
    &__title {
       font-size: 35px;
       @extend %myriad-400;
-      color: #436372;
+      color: $medium-dark;
       line-height: 1.629;
       margin-bottom: 75px;
    }
@@ -31,9 +30,9 @@
          margin-left: 30px;
       }
       &:hover {
-         border: 2px solid#a3bbc8;
+         border: 2px solid$grey-blue;
          .contact__icons {
-            background-color: #a3bbc8;
+            background-color: $grey-blue;
             fill: #fff;
          }
       }
@@ -47,21 +46,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      fill: #a3bbc8;
+      fill: $grey-blue;
       margin-bottom: 60px;
       transition: background-color, fill, 1s;
    }
    &__box {
-      font-size: 16px;
-      font-family: "Rubik";
-      color: #565872;
+      color: $shade-blue;
       line-height: 1.875;
       span {
          display: block;
       }
    }
    &__link {
-      color: #565872;
+      color: $shade-blue;
       transition: color 1s;
       &:hover {
          color: #000;

@@ -2,10 +2,10 @@
    margin-bottom: 120px;
    &__inner {
       display: flex;
-      justify-content: space-between;
    }
    &__desc {
       max-width: 305px;
+      margin-right: 65px;
    }
    &__title {
       @extend %dmsans-700;
@@ -14,8 +14,6 @@
       margin-bottom: 25px;
    }
    &__text {
-      @extend %rubik-400;
-      font-size: 16px;
       color: $dark-grey;
       line-height: 1.875;
       margin-bottom: 35px;
@@ -55,7 +53,7 @@
       box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
       margin-top: -50px;
       position: relative;
-      z-index: 100;
+      z-index: 1;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -67,7 +65,6 @@
       color: #436372;
    }
    &__box-text {
-      @extend %rubik-400;
       font-size: 17px;
       color: #565872;
    }

@@ -1,9 +1,9 @@
 .header {
    width: 100%;
    padding: 48px 15px 45px;
-   position: fixed;
    background-color: #fff;
    z-index: 100;
+   transition: all 2s;
    @media (max-width: $lg) {
       padding: 20px 0;
    }
@@ -27,6 +27,26 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
+   transition: all 1s;
+   &.fixed {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 9999;
+      min-height: 65px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      opacity: 1;
+      background-color: rgba(252, 215, 182, 0.9);
+      max-width: 1770px;
+      margin: 0 auto;
+      padding: 10px 15px;
+      opacity: 1;
+      .menu__user-item {
+         border: 1px solid #fff;
+      }
+   }
    &__list {
       display: flex;
       @media (max-width: $sm) {

@@ -97,14 +97,12 @@
    }
    &__item-title {
       @extend %dmsans-500;
-      font-size: 16px;
       line-height: 1.9;
       color: $dark-grey;
    }
    &__item-price {
       display: block;
       @extend %dmsans-700;
-      font-size: 16px;
       line-height: 1.7;
       color: $grey-blue;
    }
@@ -142,7 +140,6 @@
          }
          &__item-title {
             font-size: 40px;
-            @extend %rubik-400;
             color: #333333;
             line-height: 0.661;
             text-align: left;
@@ -151,14 +148,11 @@
          &__item-price {
             text-align: left;
             font-size: 30px;
-            @extend %rubik-400;
             color: #333333;
             line-height: 1.5;
          }
          &__item-text {
             display: block;
-            font-size: 16px;
-            @extend %rubik-400;
             line-height: 1.875;
             text-align: left;
             margin-bottom: 30px;
@@ -169,7 +163,6 @@
             background-color: rgb(163, 187, 200);
             width: 208px;
             height: 50px;
-            @extend %rubik-400;
             font-size: 15px;
             line-height: 2;
             color: #fff;
