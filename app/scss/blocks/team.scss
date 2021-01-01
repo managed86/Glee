@@ -1,0 +1,71 @@
+.team {
+   margin-bottom: 120px;
+   &__inner {
+      display: flex;
+   }
+   &__desc {
+      max-width: 305px;
+      margin-right: 65px;
+   }
+   &__title {
+      @extend %dmsans-700;
+      font-size: 36px;
+      color: $dark-grey;
+      margin-bottom: 25px;
+   }
+   &__text {
+      color: $dark-grey;
+      line-height: 1.875;
+      margin-bottom: 35px;
+   }
+   &__link {
+      display: block;
+      width: 170px;
+      height: 50px;
+      @extend %poppins-700;
+      font-size: 15px;
+      color: #fff;
+      border-radius: 5px;
+      background-color: #a3bbc8;
+      padding: 15px 30px 15px 15px;
+      &::after {
+         content: url(../images/icons/arrow-btn-small.svg);
+         margin-left: 14px;
+      }
+   }
+   &__staff {
+      display: grid;
+      grid-template: repeat(2, minmax(auto, 1fr)) / repeat(2, minmax(50%, 1fr));
+      grid-column-gap: 30px;
+      grid-row-gap: 40px;
+   }
+   &__img {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      object-position: center center;
+   }
+   &__box {
+      width: 100%;
+      max-width: 325px;
+      min-height: 110px;
+      background-color: #fff;
+      box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+      margin-top: -50px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 25px;
+   }
+   &__box-title {
+      @extend %dmsans-700;
+      font-size: 22px;
+      color: #436372;
+   }
+   &__box-text {
+      font-size: 17px;
+      color: #565872;
+   }
+}

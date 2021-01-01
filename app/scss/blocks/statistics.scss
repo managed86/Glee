@@ -1,0 +1,23 @@
+.statistics {
+   min-height: 320px;
+   background-color: #fcd7b6;
+   padding: 85px 0 75px;
+   margin-bottom: 120px;
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+   }
+   &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   &__icon,
+   &__done {
+      margin-bottom: 10px;
+   }
+   &__works {
+      font-size: 18px;
+   }
+}

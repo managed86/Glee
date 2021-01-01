@@ -1,0 +1,76 @@
+$medium-dark: #436372;
+$peach:#fcd7b6;
+$dark-grey: #243f4d;
+$grey-blue: #a3bbc8;
+$title: #191919;
+$accent: #7b7b7b;
+$title-page: #222933;
+$shade-grey: #333333;
+$shade-blue: #565872;
+%dmsans-400 {
+   font-family: 'DMSans', sans-serif;
+   font-weight: 400;
+}
+
+%dmsans-500 {
+   font-family: 'DMSans', sans-serif;
+   font-weight: 500;
+}
+
+%dmsans-700 {
+   font-family: 'DMSans', sans-serif;
+   font-weight: 700;
+}
+
+%poppins-700 {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700;
+}
+
+%rubik-300 {
+   font-family: 'Rubik', sans-serif;
+   font-weight: 300;
+}
+
+%rubik-400 {
+   font-family: 'Rubik', sans-serif;
+   font-weight: 400;
+}
+
+%rubik-500 {
+   font-family: 'Rubik', sans-serif;
+   font-weight: 500;
+}
+
+%rubik-700 {
+   font-family: 'Rubik', sans-serif;
+   font-weight: 700;
+}
+
+%myriad-400 {
+   font-family: 'MyriadPro', sans-serif;
+   font-weight: 400;
+}
+
+@function max($numbers...) {
+   @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+   @return m#{i}n(#{$numbers});
+}
+
+%checkbox-hidden {
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   position: absolute;
+}
+
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;
+// $xl:1405px;
+$xxl:1560px;

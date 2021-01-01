@@ -1,0 +1,40 @@
+.manual {
+   padding: 70px 0 100px;
+   &__title {
+      padding: 50px 0 20px;
+      @extend %rubik-500;
+      font-size: 24px;
+      line-height: 1.6;
+      color: $dark-grey;
+   }
+   &__list {
+      list-style-type: none;
+      counter-reset: item;
+   }
+   &__item {
+      line-height: 1.8;
+      color: $dark-grey;
+      padding-left: 30px;
+      position: relative;
+      margin-bottom: 25px;
+      &:nth-child(-n+9)::before {
+         position: absolute;
+         top: 0;
+         left: 0;
+         content: '0' counter(item) '.';
+         counter-increment: item;
+      }
+      &:nth-child(n+10)::before {
+         position: absolute;
+         top: 0;
+         left: 0;
+         content: counter(item) '.';
+         counter-increment: item;
+      }
+   }
+   &__text {
+      line-height: 1.8;
+      color: $dark-grey;
+      margin-bottom: 25px;
+   }
+}
