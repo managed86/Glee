@@ -7,11 +7,6 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
-
-
-
-
-
 function browsersync() {
    browserSync.init({
       server: {
@@ -73,10 +68,14 @@ function build() {
    return src([
          'app/**/*.html',
          'app/css/style.min.css',
-         'app/js/main.min.js'
+         'app/js/main.min.js',
+         'app/fonts/**/*.{woff,woff2,ttf}',
       ], { base: 'app' })
       .pipe(dest('dist'))
 }
+
+
+
 
 function cleanDist() {
    return del('dist')
