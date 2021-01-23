@@ -9,6 +9,9 @@
    &__wrapper {
       & .slick-list {
          overflow: visible;
+         .products__item {
+            display: flex !important;
+         }
       }
    }
    &__navigation {
